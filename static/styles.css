@@ -12,9 +12,11 @@
   width: 130px; 
   height: 110px; 
 }
+
 .logo-banner {
-  width: flex; 
-  height: flex; 
+  max-width: 100%; 
+  max-height: 80vh; 
+  object-fit: contain; 
 }
 
 .welcome-header {
@@ -242,27 +244,29 @@ textarea {
   background-color: #000;
   border-color: #000;
 }
-.thank-you-page {
-  display: flex;
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: center;
-  height: 10%; 
-  text-align: center;
-}
 
 .container-thank-you {
   display: flex;
   flex-direction: column;
-  justify-content: top; 
-  align-items: center; 
-  height: 100vh; 
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  padding: 20px; 
+}
+
+.thank-you-page {
+  display: none; 
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  width: 100%; 
+  text-align: center;
 }
 
 
 
 .thank-you-page.active {
-  display: block;
+  display: flex;
 }
 
 /*LAYOUT*/
