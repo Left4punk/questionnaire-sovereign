@@ -1,0 +1,323 @@
+/* HEADER STYLES */
+
+.container-logos {
+  display: flex;
+  justify-content: center;
+  padding: 5px 20px;
+  background-color: #000; 
+}
+
+
+.logo-sovereign {
+  width: 130px; 
+  height: 110px; 
+}
+.logo-banner {
+  width: flex; 
+  height: flex; 
+}
+
+.welcome-header {
+  font-family: 'Press Start 2P', cursive;
+  color: #fff;
+  font-size: 28px; 
+  text-align: center; 
+  margin-top: 0px; 
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0; 
+}
+/* HEADER STYLES */
+
+.frame_top,
+.frame_bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #000;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* DISCORD FRAME START */
+.input-container-discord {
+  display: flex; 
+  flex-direction: column; 
+  align-items: flex-start; 
+  width: 100%; 
+}
+
+.input-container-discord label {
+  font-size: 16px; 
+  color: #fff; 
+  font-family: 'Press Start 2P', cursive; 
+  margin-bottom: 10px;
+  background-image: url("../public/discord.jpg");
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 0 50%; 
+  padding-left: 30px; 
+}
+
+.input-container-discord input[type="text"] {
+  width: 400px; 
+  padding: 10px ; 
+  display: flex;
+  background-color: #222; 
+  border: 1px solid #7289DA; 
+  border-radius: 5px;
+  color: #fff; 
+  font-size: 14px;
+}
+
+.input-container-discord input[type="text"]::placeholder {
+  color: #999; 
+}
+/* DISCORD FRAME END */
+
+/* TWITTER FRAME START */
+.input-container-twitter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%; 
+}
+.input-container-twitter label {
+  font-size: 16px; 
+  color: #fff; 
+  font-family: 'Press Start 2P', cursive; 
+  margin-bottom: 10px;
+  background-image: url("../public/twitter.png");
+  background-repeat: no-repeat;
+  background-size: 20px; 
+  background-position: 0 50%; 
+  padding-left: 30px; 
+}
+
+.input-container-twitter input[type="url"] {
+  width: 430px; 
+  padding: 10px; 
+  display: flex;
+  background-color: #222; 
+  border: 1px solid #999999; 
+  border-radius: 5px;
+  color: #fff; 
+  font-size: 14px;
+}
+
+.input-container-twitter input[type="url"]::placeholder {
+  color: #999; 
+}
+
+/* TWITTER FRAME END */
+
+
+/* RECOMMENDATION FRAME START */
+.input-container-recom {
+  display: flex; 
+  flex-direction: column;
+  align-items: flex-start; 
+  width: 100%; 
+}
+.input-container-recom label {
+  font-size: 16px; 
+  color: #fff; 
+  font-family: 'Press Start 2P', cursive; 
+  margin-bottom: 10px; 
+  background-image: url("../public/recommended.png");
+  background-repeat: no-repeat;
+  background-size: 20px; 
+  background-position: 0 50%; 
+  padding-left: 30px; 
+}
+
+.input-container-recom input[type="text"] { 
+  width: 430px; 
+  padding: 10px; 
+  display: flex;
+  background-color: #222;
+  border: 1px solid #FF0000; 
+  border-radius: 5px; 
+  color: #fff; 
+  font-size: 14px; 
+}
+
+.input-container-recom input[type="text"]::placeholder {
+  color: #999; 
+}
+
+/* RECOMMENDATION FRAME END */
+
+/* VALUE FRAME START */
+.input-container-value {
+  margin: 20px 0;
+}
+
+.input-container-value label {
+  display: block;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.input-container-value textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #222;
+  border: 1px solid #F6D807;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.input-container-value textarea::placeholder {
+  color: #999;
+}
+/* VALUE FRAME END */
+
+
+/* ACHIEVEMENT FRAME START */
+.input-container-ach {
+  margin: 20px 0;
+}
+.input-container-ach label {
+  display: block; 
+  color: #fff; 
+  font-family: 'Press Start 2P', cursive; 
+  font-size: 16px; 
+  margin-bottom: 10px; 
+}
+
+.input-container-ach textarea {
+  width: 100%; 
+  padding: 10px; 
+  background-color: #222;
+  border: 1px solid #34FF02; 
+  border-radius: 5px; 
+  color: #fff; 
+  font-size: 14px; 
+}
+
+.input-container-ach textarea::placeholder { 
+  color: #999; 
+}
+
+/* ACHIEVEMENT FRAME END */
+
+
+/* BUTTON FRAME START */
+.input-container-button {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  width: 90%; 
+  padding: 5px 5px;
+  background-color: #000; 
+  border: 1px solid #fff; 
+  border-radius: 20px; 
+  color: #fff;
+  font-family: 'Press Start 2P', cursive; 
+  font-size: 14px; 
+  outline: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.input-container-button:hover {
+  background-color: #000; 
+  transform: scale(1.05); 
+}
+
+/* BUTTON FRAME END */
+
+textarea {
+  min-height: 150px;
+}
+.button-primary {
+  background-color: #000;
+  border-color: #000;
+}
+.thank-you-page {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;
+  height: 10%; 
+  text-align: center;
+}
+
+.container-thank-you {
+  display: flex;
+  flex-direction: column;
+  justify-content: top; 
+  align-items: center; 
+  height: 100vh; 
+}
+
+
+
+.thank-you-page.active {
+  display: block;
+}
+
+/*LAYOUT*/
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,2fr);
+  gap: 20px; 
+}
+
+#discord {
+  grid-column: 1 / 3; /* Ocupa la primera columna */
+  grid-row: 1; /* Primera fila */
+}
+
+#twitter {
+  grid-column: 2 / 3; /* Ocupa la segunda columna */
+  grid-row: 1; /* Primera fila */
+}
+
+#recommender {
+  grid-column: 3 / 3; /* Ocupa la tercera columna */
+  grid-row: 1; /* Primera fila */
+}
+
+#value {
+  grid-column: 1 / 4; /* Ocupa la primera columna */
+  grid-row: 2; /* Segunda fila */
+}
+
+#achievement {
+  grid-column: 3 / 4; /* Ocupa la tercera columna */
+  grid-row: 2; /* Tercera fila */
+}
+
+#apply-button {
+  grid-column: 2 / 4; /* Ocupa la segunda columna */
+  grid-row: 2; /* Tercera fila */
+}
+
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  #discord, #twitter, #recommender, #value, #achievement, #apply-button {
+    grid-column: 1;
+    grid-row: auto;
+  }
+}
+
+/* FONT FACE */
+@font-face {
+  font-family: 'Press Start 2P';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Press Start 2P'), local('PressStart2P-Regular'), url(https://fonts.gstatic.com/s/pressstart2p/v9/e3t4euO8T-6EdGnDSGdzV5aG6aA7q9ai.woff2) format('woff2');
+  unicode-range: U+0000
+}
