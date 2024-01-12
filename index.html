@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="static/styles.css"
-    
+    <link rel="stylesheet" href="static/styles.css">
+    <style>
+        /* Oculta la página de agradecimiento inicialmente */
+        .thank-you-page {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <div class="container-logos">
@@ -18,7 +23,8 @@
 
         <main class="container">
             <div class="grid">
-                <form id="questionnaire-form" action="https://script.google.com/macros/s/AKfycbyNSNfD7HBe6Dm2YGd-yKWBLqcQoSj1W_xdWZCg9_zKn9phwmn-9-xGj_bjBGCGvXEImw/exec" method="post" onsubmit="showThankYouPage(event)">
+                <form id="questionnaire-form" action="https://script.google.com/macros/s/AKfycbyNSNfD7HBe6Dm2YGd-yKWBLqcQoSj1W_xdWZCg9_zKn9phwmn-9-xGj_bjBGCGvXEImw/exec" method="post" onsubmit="showThankYouPage(event)"> 
+                    
 
                     <section class="frame_top">
                         <div class="input-container-discord">
@@ -73,11 +79,27 @@
     </section>
     <script>
         function showThankYouPage(event) {
-            /*event.preventDefault(); */
-            document.getElementById('questionnaire-form').style.display = 'none';
-            document.getElementById('headder').style.display = 'none';
-            var thankYouPage = document.querySelector('.thank-you-page');
-            thankYouPage.classList.add('active');
+            event.preventDefault(); 
+            var form = document.getElementById('questionnaire-form');
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.result === 'success') {
+                    form.style.display = 'none';
+                    document.getElementById('headder').style.display = 'none';
+
+                    // Muestra la página de agradecimiento
+                    var thankYouPage = document.querySelector('.thank-you-page');
+                    thankYouPage.style.display = 'block'; // o 'flex', según tu diseño
+                } else {
+                    alert('Hubo un error al enviar el formulario.');
+                }
+            });
         }
     </script>
 </body>
