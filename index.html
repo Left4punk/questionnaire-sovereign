@@ -15,59 +15,58 @@
 </head>
 <body>
     <div class="container-logos">
-        <img src="public/sovereign.png" alt="Sovereign Logo" class="logo-sovereign" style="width: 130px; height: 110px;"/>
+        <img src="public/sovereign.png" alt="Sovereign Logo" class="logo-sovereign"/>
     </div>
     
    
     <h1 id="headder" class="welcome-header">WELCOME ASPIRING SOVEREIGN</h1>
 
         <main class="container">
-            <div class="grid">
-                <form id="questionnaire-form" action="https://script.google.com/macros/s/AKfycbyNSNfD7HBe6Dm2YGd-yKWBLqcQoSj1W_xdWZCg9_zKn9phwmn-9-xGj_bjBGCGvXEImw/exec" method="post" onsubmit="showThankYouPage(event)"> 
+            <form id="questionnaire-form" class="container" action="https://script.google.com/macros/s/AKfycbyNSNfD7HBe6Dm2YGd-yKWBLqcQoSj1W_xdWZCg9_zKn9phwmn-9-xGj_bjBGCGvXEImw/exec" method="post" onsubmit="showThankYouPage(event)"> 
                     
+                <section class="frame_top">
+                    <div class="input-container-discord">
+                        <label for="discord">Discord</label>
+                        <input type="text" id="discord" name="discord" placeholder="Ex: Callum#1234" required>
+                    </div>
+                </section>
+    
+                <section class="frame_top">
+                    <div class="input-container-twitter">
+                        <label for="twitter">Twitter Link</label>
+                        <input type="url" id="twitter" name="twitter" placeholder="Ex: https://twitter.com/NFTCallum" required>
+                    </div>
+                </section>
+    
+                <section class="frame_top">
+                    <div class="input-container-recom">
+                        <label for="recommender">Recommended By</label>
+                        <input type="text" id="recommender" name="recommender" placeholder="Ex: Callum, Left4punk" required>
+                    </div>
+                </section>
+    
+                <section class="frame_bottom">
+                    <div class="input-container-value">
+                        <label for="value">How can you add value to Sovereign?</label>
+                        <textarea id="value" name="value" placeholder="List your strengths, be concise" required></textarea>
+                    </div>
+                </section>
+                
+                <section class="frame">
+                    <div class="input-container-button">
+                        <button type="submit" id="apply-button" class="button-primary">Send Form</button>
+                    </div>
+                </section>
 
-                    <section class="frame_top">
-                        <div class="input-container-discord">
-                            <label for="discord">Discord</label>
-                            <input type="text" id="discord" name="discord" placeholder="Ex: Callum#1234" required>
-                        </div>
-                    </section>
+                <section class="frame_bottom">
+                    <div class="input-container-ach">
+                        <label for="achievement">What is your biggest achievement?</label>
+                        <textarea id="achievement" name="achievement" placeholder="Explain your latest feat, be concise" required></textarea>
+                    </div>
+                </section>
     
-                    <section class="frame_top">
-                        <div class="input-container-twitter">
-                            <label for="twitter">Twitter Link</label>
-                            <input type="url" id="twitter" name="twitter" placeholder="Ex: https://twitter.com/NFTCallum" required>
-                        </div>
-                    </section>
-    
-                    <section class="frame_top">
-                        <div class="input-container-recom">
-                            <label for="recommender">Recommended By</label>
-                            <input type="text" id="recommender" name="recommender" placeholder="Ex: Callum, Left4punk" required>
-                        </div>
-                    </section>
-    
-                    <section class="frame_bottom">
-                        <div class="input-container-value">
-                            <label for="value">How can you add value to Sovereign?</label>
-                            <textarea id="value" name="value" placeholder="List your strengths, be concise" required></textarea>
-                        </div>
-                    </section>
-    
-                    <section class="frame_bottom">
-                        <div class="input-container-ach">
-                            <label for="achievement">What is your biggest achievement?</label>
-                            <textarea id="achievement" name="achievement" placeholder="Explain your latest feat, be concise" required></textarea>
-                        </div>
-                    </section>
-    
-                    <section class="frame">
-                        <div class="input-container-button">
-                            <button type="submit" id="apply-button" class="button-primary">Send Form</button>
-                        </div>
-                    </section>
-                </form>
-            </div>
+                
+            </form>
         </main>
     
     <section aria-label="Submitted" class="thank-you-page">
@@ -92,10 +91,8 @@
                 if (data.result === 'success') {
                     form.style.display = 'none';
                     document.getElementById('headder').style.display = 'none';
-
-                    // Muestra la página de agradecimiento
                     var thankYouPage = document.querySelector('.thank-you-page');
-                    thankYouPage.style.display = 'block'; // o 'flex', según tu diseño
+                    thankYouPage.style.display = 'flex'; 
                 } else {
                     alert('Hubo un error al enviar el formulario.');
                 }
